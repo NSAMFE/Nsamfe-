@@ -1,0 +1,480 @@
+/* =========================================================
+   NSAMFE — NAVBAR
+   7e ÉDITION • 2026
+   ========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: rgba(4, 17, 12, 0.88);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-container {
+  width: min(1400px, 94%);
+
+  min-height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  width: 125px;
+  height: 68px;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.04);
+}
+
+.navbar-logo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  /*
+    Le fichier officiel possède un fond blanc.
+    "multiply" permet au blanc de se fondre
+    dans la navbar sombre.
+  */
+  mix-blend-mode: multiply;
+
+  filter: contrast(1.05);
+
+  transition: transform 0.25s ease;
+}
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+
+  gap: 3px;
+
+  margin-left: auto;
+}
+
+.navbar-menu a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 10px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-menu a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10px;
+  right: 10px;
+  bottom: 3px;
+
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #fcd116;
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+.navbar-menu a:hover {
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+.navbar-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   NSAMFE AI
+   ========================================================= */
+
+.navbar-ai {
+  margin-left: 8px;
+
+  padding: 9px 14px !important;
+
+  border: 1px solid rgba(249, 200, 14, 0.35);
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 122, 94, 0.2),
+      rgba(123, 44, 191, 0.18)
+    );
+
+  color: #fcd116 !important;
+
+  box-shadow:
+    0 0 20px rgba(249, 200, 14, 0.05);
+}
+
+.navbar-ai::after {
+  display: none;
+}
+
+.navbar-ai:hover {
+  border-color: rgba(249, 200, 14, 0.7);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 122, 94, 0.35),
+      rgba(123, 44, 191, 0.3)
+    );
+
+  color: #ffffff !important;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.ai-spark {
+  margin-right: 6px;
+
+  color: #fcd116;
+
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   NOUS CONTACTER
+   ========================================================= */
+
+.navbar-contact {
+  margin-left: 4px;
+
+  padding: 10px 16px !important;
+
+  border-radius: 999px;
+
+  background: #ce1126;
+
+  color: #ffffff !important;
+
+  box-shadow:
+    0 8px 20px rgba(206, 17, 38, 0.2);
+}
+
+.navbar-contact::after {
+  display: none;
+}
+
+.navbar-contact:hover {
+  background: #e21b32;
+
+  color: #ffffff !important;
+
+  transform: translateY(-2px) !important;
+
+  box-shadow:
+    0 12px 28px rgba(206, 17, 38, 0.3);
+}
+
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+
+.navbar-toggle {
+  display: none;
+
+  width: 45px;
+  height: 45px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+
+  width: 21px;
+  height: 2px;
+
+  margin: 5px auto;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1150px) {
+  .navbar-container {
+    gap: 15px;
+  }
+
+  .navbar-logo {
+    width: 110px;
+  }
+
+  .navbar-menu {
+    gap: 0;
+  }
+
+  .navbar-menu a {
+    padding: 9px 7px;
+
+    font-size: 0.7rem;
+  }
+
+  .navbar-ai {
+    padding: 8px 10px !important;
+  }
+
+  .navbar-contact {
+    padding: 9px 11px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .navbar-container {
+    width: 94%;
+
+    min-height: 72px;
+
+    justify-content: space-between;
+  }
+
+  .navbar-logo {
+    width: 115px;
+    height: 58px;
+  }
+
+  .navbar-toggle {
+    display: block;
+
+    position: relative;
+
+    z-index: 1002;
+  }
+
+  .navbar-menu {
+    position: absolute;
+
+    top: 72px;
+    left: 3%;
+    right: 3%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 5px;
+
+    padding: 14px;
+
+    border:
+      1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 20px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(4, 17, 12, 0.98),
+        rgba(7, 28, 20, 0.98)
+      );
+
+    box-shadow:
+      0 25px 60px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-15px);
+
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .navbar-menu-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+  }
+
+  .navbar-menu a {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    justify-content: flex-start;
+
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    font-size: 0.9rem;
+  }
+
+  .navbar-menu a:hover {
+    background: rgba(255, 255, 255, 0.06);
+
+    transform: none;
+  }
+
+  .navbar-menu a::after {
+    display: none;
+  }
+
+  .navbar-ai {
+    margin-left: 0;
+
+    justify-content: center !important;
+
+    margin-top: 5px;
+  }
+
+  .navbar-contact {
+    margin-left: 0;
+
+    justify-content: center !important;
+  }
+}
+
+/* =========================================================
+   PETIT MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .navbar-container {
+    min-height: 68px;
+  }
+
+  .navbar-logo {
+    width: 105px;
+    height: 53px;
+  }
+
+  .navbar-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .navbar-menu {
+    top: 68px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-logo,
+  .navbar-menu,
+  .navbar-menu a,
+  .navbar-menu a::after,
+  .navbar-toggle span {
+    transition: none;
+  }
+}

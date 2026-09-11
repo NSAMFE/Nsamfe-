@@ -1,0 +1,539 @@
+/* =========================================================
+   NSAMFE — SECTION THÈME
+   7ᵉ ÉDITION • 2026
+   ========================================================= */
+
+.nsamfe-theme {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 12% 50%,
+      rgba(0, 168, 120, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 15%,
+      rgba(123, 44, 191, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 78% 90%,
+      rgba(255, 122, 0, 0.15),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #04110c 0%,
+      #071c14 45%,
+      #050807 100%
+    );
+}
+
+/* =========================================================
+   LUEURS
+   ========================================================= */
+
+.nsamfe-theme-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.nsamfe-theme-glow-one {
+  width: 280px;
+  height: 280px;
+  left: -100px;
+  top: 20%;
+
+  background: rgba(0, 168, 120, 0.2);
+
+  animation: themeFloatOne 8s ease-in-out infinite;
+}
+
+.nsamfe-theme-glow-two {
+  width: 320px;
+  height: 320px;
+  right: -100px;
+  top: 5%;
+
+  background: rgba(123, 44, 191, 0.2);
+
+  animation: themeFloatTwo 10s ease-in-out infinite;
+}
+
+.nsamfe-theme-glow-three {
+  width: 240px;
+  height: 240px;
+  right: 20%;
+  bottom: -120px;
+
+  background: rgba(255, 122, 0, 0.18);
+
+  animation: themeFloatThree 9s ease-in-out infinite;
+}
+
+/* =========================================================
+   FORMES GRAPHIQUES
+   ========================================================= */
+
+.nsamfe-theme-pattern {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transform: rotate(45deg);
+}
+
+.pattern-one {
+  width: 190px;
+  height: 190px;
+
+  left: 5%;
+  top: 10%;
+
+  border-radius: 35px;
+
+  box-shadow:
+    35px 35px 0 rgba(249, 200, 14, 0.08),
+    70px 70px 0 rgba(215, 38, 56, 0.06);
+}
+
+.pattern-two {
+  width: 230px;
+  height: 230px;
+
+  right: 4%;
+  bottom: 8%;
+
+  border-radius: 50%;
+
+  border-color: rgba(0, 184, 169, 0.13);
+}
+
+/* =========================================================
+   CONTENEUR
+   ========================================================= */
+
+.nsamfe-theme-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1400px, 92%);
+  margin: 0 auto;
+
+  padding: 100px 0;
+
+  text-align: center;
+}
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.nsamfe-theme-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  margin-bottom: 30px;
+
+  color: #f9c80e;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.nsamfe-theme-star {
+  font-size: 1.15rem;
+
+  animation: themeStar 2s ease-in-out infinite;
+}
+
+.nsamfe-theme-line {
+  width: 55px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #f9c80e,
+    transparent
+  );
+}
+
+/* =========================================================
+   ÉDITION
+   ========================================================= */
+
+.nsamfe-theme-edition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  color: #fcd116;
+
+  font-size: 0.95rem;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.edition-separator {
+  color: #ce1126;
+  font-size: 1.2rem;
+}
+
+/* =========================================================
+   TITRE
+   ========================================================= */
+
+.nsamfe-theme-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+
+  font-size: clamp(2.3rem, 5.2vw, 5.2rem);
+  line-height: 1.02;
+
+  font-weight: 900;
+
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+/* Première partie */
+
+.theme-main {
+  color: #ffffff;
+
+  text-shadow:
+    0 8px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Étoile centrale */
+
+.theme-separator {
+  margin: 4px 0;
+
+  color: #f9c80e;
+
+  font-size: 1.5rem;
+
+  animation:
+    themeStar
+    2.2s
+    ease-in-out
+    infinite;
+}
+
+/* Innovation */
+
+.theme-innovation {
+  background: linear-gradient(
+    90deg,
+    #00a878,
+    #00b8a9,
+    #7b2cbf
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+/* Haute en couleur */
+
+.theme-color {
+  background: linear-gradient(
+    90deg,
+    #f9c80e,
+    #ff7a00,
+    #e83e8c,
+    #ce1126
+  );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  animation:
+    colorFlow
+    5s
+    linear
+    infinite;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.nsamfe-theme-description {
+  max-width: 760px;
+
+  margin: 34px auto 0;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   PALETTE ARTISTIQUE
+   ========================================================= */
+
+.nsamfe-theme-colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 38px;
+}
+
+.theme-color-dot {
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 18px currentColor;
+}
+
+.theme-color-dot.green {
+  background: #007a5e;
+  color: #007a5e;
+}
+
+.theme-color-dot.yellow {
+  background: #fcd116;
+  color: #fcd116;
+}
+
+.theme-color-dot.red {
+  background: #ce1126;
+  color: #ce1126;
+}
+
+.theme-color-dot.orange {
+  background: #ff7a00;
+  color: #ff7a00;
+}
+
+.theme-color-dot.turquoise {
+  background: #00b8a9;
+  color: #00b8a9;
+}
+
+.theme-color-dot.purple {
+  background: #7b2cbf;
+  color: #7b2cbf;
+}
+
+.theme-color-dot.pink {
+  background: #e83e8c;
+  color: #e83e8c;
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes themeFloatOne {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(35px, -20px);
+  }
+}
+
+@keyframes themeFloatTwo {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-30px, 25px);
+  }
+}
+
+@keyframes themeFloatThree {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-25px, -25px);
+  }
+}
+
+@keyframes themeStar {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.25) rotate(15deg);
+    opacity: 1;
+  }
+}
+
+@keyframes colorFlow {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 250% center;
+  }
+}
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .nsamfe-theme {
+    min-height: 560px;
+  }
+
+  .nsamfe-theme-container {
+    padding: 75px 0;
+  }
+
+  .nsamfe-theme-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+  }
+
+  .nsamfe-theme-line {
+    width: 30px;
+  }
+
+  .nsamfe-theme-edition {
+    gap: 9px;
+
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+  }
+
+  .nsamfe-theme-title {
+    font-size: clamp(2rem, 10vw, 3.3rem);
+
+    gap: 10px;
+  }
+
+  .theme-separator {
+    font-size: 1.1rem;
+  }
+
+  .nsamfe-theme-description {
+    padding: 0 18px;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .nsamfe-theme-colors {
+    margin-top: 30px;
+  }
+
+  .pattern-one {
+    left: -100px;
+  }
+
+  .pattern-two {
+    right: -120px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .nsamfe-theme-container {
+    padding: 65px 0;
+  }
+
+  .nsamfe-theme-label {
+    gap: 8px;
+
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .nsamfe-theme-edition {
+    gap: 7px;
+
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  .edition-separator {
+    font-size: 0.9rem;
+  }
+
+  .nsamfe-theme-title {
+    font-size: 2rem;
+  }
+
+  .nsamfe-theme-description {
+    font-size: 0.9rem;
+  }
+
+  .theme-color-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .nsamfe-theme-glow,
+  .nsamfe-theme-star,
+  .theme-separator,
+  .theme-color {
+    animation: none;
+  }
+}
