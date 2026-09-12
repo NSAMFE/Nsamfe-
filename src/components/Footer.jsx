@@ -80,7 +80,7 @@ function Footer() {
 
           <div className="footer-contact">
             <span>📞 Téléphone : À venir</span>
-            <span>✉️ Email : À venir</span>
+            <span>✉️ Email : nsamfe@outlook.fr</span>
           </div>
         </div>
 
